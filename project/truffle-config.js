@@ -1,7 +1,7 @@
 const HDWalletProvider = require("truffle-hdwallet-provider");
 
-const MNEMONIC = "your mnemonic";
-const API_KEY = "YOUR INFURA API KEY";
+const MNEMONIC = "spirit supply whale amount human item harsh scare congress discover talent hamster";
+const API_KEY = "56c5de7cdaee4ba5945058609b618ab5";
 module.exports = {
   // See <http://truffleframework.com/docs/advanced/configuration>
   // to customize your Truffle configuration!
@@ -11,7 +11,7 @@ module.exports = {
         port: 8545,
         network_id: "*",
         gas: 999999999,
-        gasPrice: 21000000000
+        gasPrice: 999999999999
     },
     rinkeby: {
         provider: function() {

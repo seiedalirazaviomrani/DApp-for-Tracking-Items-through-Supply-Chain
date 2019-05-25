@@ -32,20 +32,20 @@ A step by step series of examples that tell you have to get a development env ru
 Clone this repository:
 
 ```
-git clone https://github.com/udacity/nd1309/tree/master/course-5/project-6
+git clone https://github.com/seiedalirazaviomrani/DApp-for-Tracking-Items-through-Supply-Chain
 ```
 
-Change directory to ```project-6``` folder and install all requisite npm packages (as listed in ```package.json```):
+Change directory to ```project``` folder and install all requisite npm packages (as listed in ```package.json```):
 
 ```
-cd project-6
+cd project
 npm install
 ```
 
 Launch Ganache:
 
 ```
-ganache-cli -m "spirit supply whale amount human item harsh scare congress discover talent hamster"
+ganache-cli -m "spirit supply whale amount human item harsh scare congress discover talent hamster" --gasLimit 999999999 --gasPrice 999999999999 --allowUnlimitedContractSize
 ```
 
 Your terminal should look something like this:
@@ -67,7 +67,7 @@ This will create the smart contract artifacts in folder ```build\contracts```.
 Migrate smart contracts to the locally running blockchain, ganache-cli:
 
 ```
-truffle migrate
+truffle migrate --reset --network development
 ```
 
 Your terminal should look something like this:
@@ -77,10 +77,10 @@ Your terminal should look something like this:
 Test smart contracts:
 
 ```
-truffle test
+truffle test test/TestSupplyChain.js
 ```
 
-All 10 tests should pass.
+All 36 tests should pass.
 
 ![truffle test](images/truffle_test.png)
 

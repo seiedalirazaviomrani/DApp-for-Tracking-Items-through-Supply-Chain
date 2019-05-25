@@ -13,7 +13,7 @@ App = {
     ownerID: "0x0000000000000000000000000000000000000000",
     originFarmerID: "0x0000000000000000000000000000000000000000",
     originFarmName: null,
-    originFarmName: null,
+    originFarmInformation: null,
     originFarmLatitude: null,
     originFarmLongitude: null,
     productNotes: null,
@@ -38,7 +38,7 @@ App = {
         App.ownerID = $("#ownerID").val();
         App.originFarmerID = $("#originFarmerID").val();
         App.originFarmName = $("#originFarmName").val();
-        App.originFarmName = $("#originFarmName").val();
+        App.originFarmInformation = $("#originFarmInformation").val();
         App.originFarmLatitude = $("#originFarmLatitude").val();
         App.originFarmLongitude = $("#originFarmLongitude").val();
         App.productNotes = $("#productNotes").val();
@@ -56,7 +56,7 @@ App = {
             App.ownerID, 
             App.originFarmerID, 
             App.originFarmName, 
-            App.originFarmName, 
+            App.originFarmInformation, 
             App.originFarmLatitude, 
             App.originFarmLongitude, 
             App.productNotes, 
@@ -195,10 +195,10 @@ App = {
                 return await App.sellItemToDistributor(event);
                 break;
             case 13:
-                return await App.buyItemByDistributor(event);
+                return await App.shipItemToDistributor(event);
                 break;
             case 14:
-                return await App.shipItemToDistributor(event);
+                return await App.buyItemByDistributor(event);
                 break;
             case 15:
                 return await App.receiveItemByDistributor(event);
@@ -276,7 +276,7 @@ App = {
                 App.upcObtainItem, 
                 App.metamaskAccountID, 
                 App.originFarmName, 
-                App.originFarmName, 
+                App.originFarmInformation, 
                 App.originFarmLatitude, 
                 App.originFarmLongitude, 
                 App.productNotes,
